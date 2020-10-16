@@ -42,4 +42,30 @@ public class LoginPageTests extends BaseTest {
 		forgotUserNamePage.enterEmailAddress(testData.get("EMAIL_ADDRESS"));
 		forgotUserNamePage.clickContinue();
 	}
+	
+	@Test
+	public void verifyForgotusername1() throws BiffException, IOException {
+		test = extent.createTest("verifyForgotusername", "verifyForgotusername");
+		Map<String, String> testData = ExcelUtility.getTestData("verifyForgotUserName");
+		HomePage homePage = new HomePage(driver);
+		homePage.navigateToLoginPage();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.navigateToForgotUsernamePage();
+		ForgotUserNamePage forgotUserNamePage = new ForgotUserNamePage(driver);
+		forgotUserNamePage.enterEmailAddress(testData.get("EMAIL_ADDRESS"));
+		forgotUserNamePage.clickContinue();
+	}
+	
+	@Test
+	public void verifyForgotusername2() throws BiffException, IOException {
+		test = extent.createTest("verifyForgotusername", "verifyForgotusername");
+		Map<String, String> testData = ExcelUtility.getTestData("verifyForgotUserName");
+		HomePage homePage = new HomePage(driver);
+		homePage.navigateToLoginPage();
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.navigateToForgotUsernamePage();
+		ForgotUserNamePage forgotUserNamePage = new ForgotUserNamePage(driver);
+		forgotUserNamePage.enterEmailAddress(testData.get("EMAIL_ADDRESS"));
+		forgotUserNamePage.clickContinue();
+	}
 }
